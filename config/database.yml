@@ -1,0 +1,16 @@
+development: &base
+  adapter: postgresql
+  encoding: unicode
+  database: learn_development
+  pool: 5
+  port: 5433
+  username: help
+  password: help3
+
+test:
+  <<: *base
+  database: learn_test
+
+production:
+  <<: *base
+  database: learn_production

@@ -21,8 +21,9 @@ gem 'bitters'
 # authentication
 gem 'devise'
 
-# math
+# math and markup
 gem 'mathjax-rails'
+gem 'RedCloth', require: true
 
 # test
 group :test do

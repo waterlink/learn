@@ -1,0 +1,21 @@
+= form_for @page do |f|
+  - if @page.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
+      ul
+        - @page.errors.full_messages.each do |message|
+          li = message
+
+  = f.hidden_field :presentation_id
+  .field
+    = f.label :number
+    = f.number_field :number
+  .field
+    = f.label :content
+    = f.text_area :content, rows: 5, onfocus: "editor(this)", id: "content"
+  .actions = f.submit 'Save'
+
+.actions
+  = link_to "Preview", "#preview", onclick: "preview($('#content')[0])"
+  #preview
+

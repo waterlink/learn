@@ -1,0 +1,19 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @presentation.title
+
+= link_to 'Edit', edit_presentation_path(@presentation)
+'|
+= link_to 'Back', presentations_path
+
+p
+
+p
+  strong Pages:
+  ul
+    = render @presentation.pages
+
+= link_to 'New', new_page_path(page: { presentation_id: @presentation })
+

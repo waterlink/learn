@@ -1,0 +1,13 @@
+p#notice = notice
+
+article = RedCloth.new(@page.content).to_html.html_safe
+
+= link_to 'Edit', edit_page_path(@page)
+' |
+= link_to 'Back', @page.presentation
+- if @page.prev
+  ' |
+  = link_to 'Prev', @page.prev
+- if @page.next
+  ' |
+  = link_to 'Next', @page.next

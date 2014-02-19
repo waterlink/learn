@@ -6,3 +6,9 @@ window.preview = (content) ->
   $('#preview').html textile $(content).val()
   MathJax.Hub.Queue(["Typeset",MathJax.Hub])
 
+ready = ->
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+
+$(document).ready ready
+$(document).on 'page:load', ready
+

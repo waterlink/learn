@@ -10,3 +10,14 @@ ol {
   @extend %default-ol;
 }
 
+body {
+  @include outer-container;
+  article {
+    @include span-columns(10); @include shift(1);
+  }
+}
+
+h1 {
+  text-align: center;
+}
+

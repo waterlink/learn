@@ -1,12 +1,5 @@
 h1 Home#index
-p Find me in app/views/home/index.html.slim
 
-
-textarea#content onfocus="editor(this)"
-  |hello world
-  ' \[\int_{-\infty}^{+\infty}{\frac{\sqrt{2^{x+y}}}{y^2}}\]
-
-a href="#preview" onclick="preview($('#content')[0])" Preview
-
-#preview
+ul
+  = render @presentations
 

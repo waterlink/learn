@@ -13,7 +13,17 @@
  */
 
 @import "bourbon";
-@import "bitters/bitters";
+
+@media print {
+  $base-font-size: 0.9em;
+  @import "bitters/bitters";
+}
+
+@media screen {
+  $base-font-size: 1.5em;
+  @import "bitters/bitters";
+}
+
 @import "neat";
 @import "jsvi/vi";
 

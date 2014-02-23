@@ -4,10 +4,16 @@
 
 ul {
   @extend %default-ul;
+  ul {
+    list-style-type: circle;
+  }
 }
 
 ol {
   @extend %default-ol;
+  ol {
+    list-style-type: latin;
+  }
 }
 
 body {

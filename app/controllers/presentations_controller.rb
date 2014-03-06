@@ -1,5 +1,5 @@
 class PresentationsController < ApplicationController
-  before_action :set_presentation, only: [:show, :edit, :update, :destroy]
+  before_action :set_presentation, only: [:show, :edit, :update, :destroy, :print]
 
   # GET /presentations
   # GET /presentations.json
@@ -59,6 +59,9 @@ class PresentationsController < ApplicationController
       format.html { redirect_to presentations_url }
       format.json { head :no_content }
     end
+  end
+
+  def print
   end
 
   private

@@ -27,6 +27,10 @@ h1 {
   text-align: center;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 @media print {
   .action,
   .action-delimiter {

@@ -1,0 +1,12 @@
+article
+  You will be redirected to this url in 10 seconds:
+  = link_to @url, @url
+
+javascript:
+  self.redirect_to = '#{@url}'
+
+coffee:
+  setTimeout ->
+    @location = @redirect_to
+  , 10000
+

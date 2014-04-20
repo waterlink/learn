@@ -16,10 +16,12 @@ ol {
   }
 }
 
-body {
-  @include outer-container;
-  article {
-    @include span-columns(10); @include shift(1);
+@media screen {
+  body {
+    @include outer-container;
+    article {
+      @include span-columns(10); @include shift(1);
+    }
   }
 }
 
@@ -36,5 +38,7 @@ pre {
   .action-delimiter {
     display: none;
   }
+
+  .page-break { page-break-before: always; }
 }
 

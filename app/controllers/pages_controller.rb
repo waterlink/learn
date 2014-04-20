@@ -1,3 +1,5 @@
+require 'learn/pdf'
+
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
@@ -10,6 +12,10 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf { pdf_with_redirect }
+    end
   end
 
   # GET /pages/new

@@ -1,3 +1,5 @@
+require 'learn/pdf'
+
 class PresentationsController < ApplicationController
   before_action :set_presentation, only: [:show, :edit, :update, :destroy, :print]
 
@@ -62,6 +64,10 @@ class PresentationsController < ApplicationController
   end
 
   def print
+    respond_to do |format|
+      format.html
+      format.pdf { pdf_with_redirect }
+    end
   end
 
   private

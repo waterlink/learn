@@ -5,6 +5,9 @@ article = RedCloth.new(@page.content).to_html.html_safe
 = link_to 'Edit', edit_page_path(@page), class: 'action'
 span.action-delimiter
   ' |
+= link_to 'PDF', page_path(@page, format: 'pdf'), class: 'action'
+span.action-delimiter
+  ' |
 = link_to 'Back', @page.presentation, class: 'action'
 - if @page.prev
   span.action-delimiter

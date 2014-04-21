@@ -6,6 +6,10 @@ p
 
 = link_to 'Edit', edit_presentation_path(@presentation)
 '|
+= link_to 'Print', print_presentation_path(@presentation)
+'|
+= link_to 'PDF', print_presentation_path(@presentation, format: 'pdf')
+'|
 = link_to 'Back', presentations_path
 
 p

@@ -1,0 +1,30 @@
+.blocks {
+  @include outer-container;
+
+  .left-block,
+  .right-block {
+    @include span-columns(5);
+  }
+
+  .left-block {
+    @include shift(1);
+  }
+
+  header {
+    @include shift(1);
+    @include span-columns(9);
+  }
+
+  .close {
+    @include span-columns(1);
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '×';
+      margin-left: 4em;
+      position: relative;
+      top: -0.7em;
+    }
+  }
+}

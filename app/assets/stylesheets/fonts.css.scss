@@ -2,11 +2,13 @@
   $base-font-size: 0.9em;
   @import "bitters/bitters";
   @import "headers";
+  @import "font-sizes";
 }
 
 @media screen {
   $base-font-size: 1.5em;
   @import "bitters/bitters";
   @import "headers";
+  @import "font-sizes";
 }
 

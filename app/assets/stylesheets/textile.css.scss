@@ -1,8 +1,7 @@
 #raw {
   display: none;
-}
 
-#raw:target {
-  display: initial;
+  &:target {
+    display: initial;
+  }
 }
-

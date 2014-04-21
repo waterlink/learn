@@ -1,0 +1,28 @@
+#help.modal-container
+  .modal.blocks
+    header
+      h4 Keyboard cheatsheet
+    .close onclick='location.hash = "#"'
+    dl.left-block
+      dt
+        dfn &larr;
+      dd previous page
+      dt
+        dfn &rarr;
+      dd next page
+      dt
+        dfn ESC
+      dd back to list of pages
+    dl.right-block
+      dt
+        dfn E
+      dd Edit page
+      dt
+        dfn R
+      dd raw textile source
+      dt
+        dfn P
+      dd download PDF
+
+= link_to '?', '#help', id: 'help_button', class: 'right-bottom-button'
+

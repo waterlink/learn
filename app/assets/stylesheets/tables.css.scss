@@ -15,3 +15,16 @@ td {
   vertical-align: top;
 }
 
+@media print {
+  table {
+    page-break-inside: avoid !important; // doesn't work
+    display: inline-table;
+
+    &:after {
+      display: block;
+      height: 0px;
+      visibility: hidden;
+    }
+  }
+}
+

@@ -1,0 +1,12 @@
+@media print {
+  $base-font-size: 0.9em;
+  @import "bitters/bitters";
+  @import "headers";
+}
+
+@media screen {
+  $base-font-size: 1.5em;
+  @import "bitters/bitters";
+  @import "headers";
+}
+
